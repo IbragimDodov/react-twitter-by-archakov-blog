@@ -42,6 +42,7 @@ export const theme = createTheme({
   // shadows: [],
   shadows: {
     24: '0px 1px 3px 0px grey, 0px 4px 8px 3px grey, 0px 1px 6px 2px grey',
+    1: '0px 1px 3px 0px grey, 0px 4px 8px 3px grey, 0px 1px 6px 2px grey',
   },
   overrides: {
     MuiButton: {
