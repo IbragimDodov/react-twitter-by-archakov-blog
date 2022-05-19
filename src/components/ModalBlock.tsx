@@ -8,7 +8,7 @@ import { Dialog,
 } from "@mui/material";
 
 interface ModalBlockProps {
-  title: string;
+  title?: string;
   children: React.ReactNode;
   classes?: ReturnType<typeof useStylesSignIn>;
   visible?: boolean;

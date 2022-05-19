@@ -11,6 +11,7 @@ import ListIcon from '@mui/icons-material/ListAltOutlined';
 import UserIcon from '@mui/icons-material/PersonOutlineOutlined';
 import { useHomeStyles } from '../pages/Home';
 import { ModalBlock } from './ModalBlock';
+import { AddTweetForm } from './AddTweetForm';
 
 interface SideMenuProps {
   classes: ReturnType<typeof useHomeStyles>;
@@ -93,8 +94,10 @@ export const SideMenu: React.FC<SideMenuProps> = ({classes}: SideMenuProps): Rea
               <CreateIcon/>
             </Hidden>
         </Button>
-        <ModalBlock onClose={onCloseAddTweet} title={''} visible={visibleAddTweet}>
-          ...
+        <ModalBlock onClose={onCloseAddTweet} visible={visibleAddTweet}>
+          <div style={{width: 550}} >
+            <AddTweetForm maxRows={15} classes={classes}/>
+          </div>
         </ModalBlock>
       </li>
     </ul>

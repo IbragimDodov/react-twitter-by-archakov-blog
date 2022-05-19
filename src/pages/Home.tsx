@@ -3,6 +3,8 @@ import Grid from '@mui/material/Grid';
 
 import SearchIcon from '@mui/icons-material/SearchOutlined';
 import PersonAddIcon from '@mui/icons-material/PersonAddAlt1Outlined';
+// import {CircularProgress} from 'material-ui/CircularProgress';
+import { selectIsTweetsLoading } from '../store/ducks/tweets/selectors';
 
 import {
   InputAdornment,
@@ -20,8 +22,8 @@ import {
   Paper,
   Avatar,
   TextareaAutosize,
-  CircularProgress,
   Button, 
+  CircularProgress,
   ListItemText} from '@mui/material';
 
 import { withStyles } from '@mui/styles';
@@ -32,6 +34,9 @@ import { Tweet } from '../components/Tweet';
 import { SideMenu } from '../components/SideMenu';
 import { AddTweetForm } from '../components/AddTweetForm';
 import { SearchTextField } from '../components/SearchTextField';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTweets } from '../store/ducks/tweets/actionsCreators';
+import { selectTweetsItems } from '../store/ducks/tweets/selectors';
 
 
 
@@ -125,6 +130,10 @@ export const useHomeStyles = makeStyles((theme: Theme) => ({
     width: theme.spacing(5),
     height: theme.spacing(5),
     marginRight: 10,
+  },
+  tweetCentered: {
+    marginTop: 50,
+    textAlign: 'center',
   },
   tweetFooter: {
     position: 'relative',
@@ -222,6 +231,13 @@ export const useHomeStyles = makeStyles((theme: Theme) => ({
 
 export const Home = (): React.ReactElement => {
   const classes = useHomeStyles();
+  const dispatch = useDispatch();
+  const tweets = useSelector(selectTweetsItems);
+  const isLoading = useSelector(selectIsTweetsLoading);
+
+  React.useEffect(() => {
+    dispatch(fetchTweets());
+  }, [dispatch]);
 
   return (
     <Container className={classes.wrapper} maxWidth='lg'>
@@ -235,21 +251,16 @@ export const Home = (): React.ReactElement => {
               <Typography variant='h6' >Главная</Typography>
             </Paper>
             <Paper>
-              <AddTweetForm classes={classes}/>
+              <div className={classes.addForm}>
+                <AddTweetForm classes={classes}/>
+              </div>
             </Paper>
             <div className={classes.addFormBottomLine} />
-            {[
-              ...new Array(20).fill(
-                <Tweet
-                user={{
-                  fullname: '@nikFullName',
-                  username: 'nikName',
-                  avatarUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/KCon_2017_LA_Girl%27s_Day.jpg/1920px-KCon_2017_LA_Girl%27s_Day.jpg',
-                }}
-                text={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta ex ratione sint perspiciatis. Reiciendis, consectetur. Voluptas suscipit non vero eos ratione, asperiores, incidunt consequatur commodi necessitatibus ut recusandae rerum fugit.' }
-                classes={classes} />,
-              ),
-            ]}
+            {isLoading ? (
+              <div className={classes.tweetCentered}><CircularProgress/></div>
+            ) : tweets.map((tweet) => (
+              <Tweet key={tweet._id} text={tweet.text} user={tweet.user} classes={classes} />
+            ))}
           </Paper>
         </Grid>
         <Grid item sm={3} md={3}>
