@@ -26,7 +26,7 @@ import {
   Button, 
   ListItemText} from '@mui/material';
 
-import { useHomeStyles } from '../pages/Home';
+import { useHomeStyles } from '../pages/Home/Home';
 import { kMaxLength } from 'buffer';
 
 // const theme = createTheme();

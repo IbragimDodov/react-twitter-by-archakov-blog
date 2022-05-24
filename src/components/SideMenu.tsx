@@ -9,9 +9,10 @@ import MessageIcon from '@mui/icons-material/MailOutlineOutlined';
 import BookmarkIcon from '@mui/icons-material/BookmarkBorderOutlined';
 import ListIcon from '@mui/icons-material/ListAltOutlined';
 import UserIcon from '@mui/icons-material/PersonOutlineOutlined';
-import { useHomeStyles } from '../pages/Home';
+import { useHomeStyles } from '../pages/Home/Home';
 import { ModalBlock } from './ModalBlock';
 import { AddTweetForm } from './AddTweetForm';
+import { Link } from 'react-router-dom';
 
 interface SideMenuProps {
   classes: ReturnType<typeof useHomeStyles>;
@@ -31,9 +32,11 @@ export const SideMenu: React.FC<SideMenuProps> = ({classes}: SideMenuProps): Rea
   return (
     <ul className={classes.sideMenuList}>
       <li className={classes.sideMenuListItem}>
-        <IconButton className={classes.logo} aria-label='' color='primary'>
-          <TwitterIcon className={classes.logoIcon} />
-        </IconButton>
+        <Link to='/home'>
+          <IconButton className={classes.logo} aria-label='' color='primary'>
+            <TwitterIcon className={classes.logoIcon} />
+          </IconButton>
+        </Link>
       </li>
       <li className={classes.sideMenuListItem}>
         <div>

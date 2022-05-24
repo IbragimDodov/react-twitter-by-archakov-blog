@@ -1,0 +1,123 @@
+{
+  "tweets": [
+    {
+      "_id": "6282a6710ca92021cc88385b",
+      "text": "Consequat officia labore incididunt esse occaecat reprehenderit aute mollit eu anim occaecat.",
+      "user": {
+        "fullname": "Craft Shelton",
+        "username": "brittney",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?9"
+      }
+    },
+    {
+      "_id": "6282a6713d96b2785166e010",
+      "text": "Some interesting post",
+      "user": {
+        "fullname": "Blanca Floyd",
+        "username": "winifred",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?9"
+      }
+    },
+    {
+      "_id": "6282a67101cd0ecfe79a0627",
+      "text": "Fugiat esse voluptate qui voluptate ullamco nostrud irure aliquip irure eu.",
+      "user": {
+        "fullname": "Roth Cohen",
+        "username": "davidson",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?8"
+      }
+    },
+    {
+      "_id": "6282a671e35f7728cdb83931",
+      "text": "Elit enim fugiat ad anim.",
+      "user": {
+        "fullname": "Conrad Hutchinson",
+        "username": "randolph",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?5"
+      }
+    },
+    {
+      "_id": "6282a67186e220787e8273e6",
+      "text": "Voluptate deserunt sunt do anim sint tempor excepteur pariatur quis esse.",
+      "user": {
+        "fullname": "Lee Lawson",
+        "username": "green",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?10"
+      }
+    },
+    {
+      "_id": "6282a6712cace7f54e181160",
+      "text": "Eu adipisicing sit consectetur Lorem magna fugiat cupidatat ad officia.",
+      "user": {
+        "fullname": "Rosalinda Christian",
+        "username": "constance",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?7"
+      }
+    },
+    {
+      "_id": "6282a671030a01087eaefb34",
+      "text": "Cupidatat consectetur non culpa sit Lorem minim esse.",
+      "user": {
+        "fullname": "Clay Rogers",
+        "username": "boyle",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?8"
+      }
+    },
+    {
+      "_id": "6282a67145d9ce6820ec6a7b",
+      "text": "Nisi incididunt ut laborum minim cillum eiusmod laborum esse.",
+      "user": {
+        "fullname": "Jensen Nixon",
+        "username": "hoffman",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "6282a6717a184a4177750cfb",
+      "text": "Esse incididunt esse esse exercitation minim nisi non.",
+      "user": {
+        "fullname": "Butler Valdez",
+        "username": "crawford",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?5"
+      }
+    },
+    {
+      "_id": "6282a671178fd72170514a82",
+      "text": "Non ut tempor cillum nostrud sint pariatur proident nulla commodo enim.",
+      "user": {
+        "fullname": "Nettie Fernandez",
+        "username": "christy",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    }
+  ],
+  "tags": [
+    {"_id": "6282a226710ca92021cc88385b", "name": "#HandOffRussianHistory", "count": 44234},
+    {"_id": "62782a671032ca92021cc88385b", "name": "Навального", "count": 4442},
+    {"_id": "6282a6710ca92021cc8838425b8", "name": "гитлер", "count": 4422},
+    {"_id": "6282a6710ca9112021cc88385b77", "name": "Беларусь", "count": 44255}
+  ],
+  "users": [
+    {
+    "fullname": "Lee Lawson",
+    "username": "green",
+    "avatarUrl": "https://source.unsplash.com/random/100x100?10"
+    },
+    {
+      "fullname": "Jensen Nixon",
+      "username": "hoffman",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+    },
+    {
+      "fullname": "Craft Shelton",
+      "username": "brittney",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?9"
+    }
+  ],
+  "user": {
+    "_id": "6282a67186e220787e8273e6",
+    "fullname": "Archakov Dennis",
+    "username": "archakov06",
+    "avatarUrl": "https://source.unsplash.com/random/100x100?10"
+  }
+}
