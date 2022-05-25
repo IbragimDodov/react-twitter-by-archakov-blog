@@ -1,11 +1,9 @@
 import React from 'react'
 import Grid from '@mui/material/Grid';
-
 import SearchIcon from '@mui/icons-material/SearchOutlined';
 import PersonAddIcon from '@mui/icons-material/PersonAddAlt1Outlined';
 import { selectIsTweetsLoading } from '../../store/ducks/tweets/selectors';
 import { FullTweet } from './components/FullTweet';
-
 
 import {
   InputAdornment,
@@ -34,11 +32,8 @@ import { fetchTags } from '../../store/ducks/tags/actionsCreators';
 import { selectTweetsItems } from '../../store/ducks/tweets/selectors';
 import { Tags } from '../../components/Tags';
 import { Route } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 import { BackButton } from '../../components/BackButton';
-import { fetchTweetData } from '../../store/ducks/tweet/actionsCreators';
-
 
 
 export const useHomeStyles = makeStyles((theme: Theme) => ({
@@ -98,7 +93,6 @@ export const useHomeStyles = makeStyles((theme: Theme) => ({
   sideMenuTweetButton: {
     padding: theme.spacing(3),
     marginTop: '25px !important',
-    // width: 230,
   },
   tweetsWrapper: {
     borderRadius: 0,
@@ -297,7 +291,6 @@ export const Home = (): React.ReactElement => {
 
             <Route path='/home/tweet/:id' component={FullTweet} exact />
               
-            
 
           </Paper>
         </Grid>

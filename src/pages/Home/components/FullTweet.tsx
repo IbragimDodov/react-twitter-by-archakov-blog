@@ -28,7 +28,6 @@ export const FullTweet: React.FC = (): React.ReactElement | null => {
 
   }, [dispatch, id]);
 
-
   if (isLoading) {
     return (
       <div className={classes.tweetCentered}><CircularProgress/></div>
